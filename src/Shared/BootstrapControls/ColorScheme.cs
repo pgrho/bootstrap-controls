@@ -14,6 +14,7 @@ namespace Shipwreck.BootstrapControls
     {
         public static readonly ColorScheme Default = new ColorScheme()
         {
+            Name = "Default",
             TextColor = FromRgba(33, 37, 41, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(0, 0, 0, 0),
@@ -27,6 +28,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Primary = new ColorScheme()
         {
+            Name = "Primary",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(0, 123, 255, 255),
             BorderColor = FromRgba(0, 123, 255, 255),
@@ -40,6 +42,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlinePrimary = new ColorScheme()
         {
+            Name = "OutlinePrimary",
             TextColor = FromRgba(0, 123, 255, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(0, 123, 255, 255),
@@ -53,6 +56,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Secondary = new ColorScheme()
         {
+            Name = "Secondary",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(108, 117, 125, 255),
             BorderColor = FromRgba(108, 117, 125, 255),
@@ -66,6 +70,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineSecondary = new ColorScheme()
         {
+            Name = "OutlineSecondary",
             TextColor = FromRgba(108, 117, 125, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(108, 117, 125, 255),
@@ -79,6 +84,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Success = new ColorScheme()
         {
+            Name = "Success",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(40, 167, 69, 255),
             BorderColor = FromRgba(40, 167, 69, 255),
@@ -92,6 +98,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineSuccess = new ColorScheme()
         {
+            Name = "OutlineSuccess",
             TextColor = FromRgba(40, 167, 69, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(40, 167, 69, 255),
@@ -105,6 +112,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Danger = new ColorScheme()
         {
+            Name = "Danger",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(220, 53, 69, 255),
             BorderColor = FromRgba(220, 53, 69, 255),
@@ -118,6 +126,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineDanger = new ColorScheme()
         {
+            Name = "OutlineDanger",
             TextColor = FromRgba(220, 53, 69, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(220, 53, 69, 255),
@@ -131,6 +140,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Warning = new ColorScheme()
         {
+            Name = "Warning",
             TextColor = FromRgba(33, 37, 41, 255),
             BackgroundColor = FromRgba(255, 193, 7, 255),
             BorderColor = FromRgba(255, 193, 7, 255),
@@ -144,6 +154,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineWarning = new ColorScheme()
         {
+            Name = "OutlineWarning",
             TextColor = FromRgba(255, 193, 7, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(255, 193, 7, 255),
@@ -157,6 +168,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Info = new ColorScheme()
         {
+            Name = "Info",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(23, 162, 184, 255),
             BorderColor = FromRgba(23, 162, 184, 255),
@@ -170,6 +182,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineInfo = new ColorScheme()
         {
+            Name = "OutlineInfo",
             TextColor = FromRgba(23, 162, 184, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(23, 162, 184, 255),
@@ -183,6 +196,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Dark = new ColorScheme()
         {
+            Name = "Dark",
             TextColor = FromRgba(255, 255, 255, 255),
             BackgroundColor = FromRgba(52, 58, 64, 255),
             BorderColor = FromRgba(52, 58, 64, 255),
@@ -196,6 +210,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme OutlineDark = new ColorScheme()
         {
+            Name = "OutlineDark",
             TextColor = FromRgba(52, 58, 64, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(52, 58, 64, 255),
@@ -209,6 +224,7 @@ namespace Shipwreck.BootstrapControls
 
         public static readonly ColorScheme Link = new ColorScheme()
         {
+            Name = "Link",
             TextColor = FromRgba(0, 123, 255, 255),
             BackgroundColor = FromRgba(0, 0, 0, 0),
             BorderColor = FromRgba(0, 0, 0, 0),
@@ -220,6 +236,7 @@ namespace Shipwreck.BootstrapControls
             FocusShadowColor = FromRgba(0, 123, 255, 64),
         };
 
+        public string Name { get; private set; }
         public int TextColor { get; private set; }
         public int BackgroundColor { get; private set; }
         public int BorderColor { get; private set; }
