@@ -121,6 +121,18 @@
         TopRight="0.2"
         BottomRight="0.2"
         BottomLeft="0.2" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Small.CornerRadiusConverter.Left"
+        TopLeft="0.2"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.2" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Small.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.2"
+        BottomRight="0.2"
+        BottomLeft="0" />
     <Style
         x:Key="BootstrapControls.Button.Small"
         TargetType="Button"
@@ -134,8 +146,30 @@
         <Setter
             Property="mah:ControlsHelper.CornerRadius"
             Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
-
     <bs4:DoubleMultiplicationConverter
         x:Key="BootstrapControls.Button.Medium.FontSizeConverter"
         Coefficient="1" />
@@ -151,6 +185,18 @@
         TopRight="0.25"
         BottomRight="0.25"
         BottomLeft="0.25" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Medium.CornerRadiusConverter.Left"
+        TopLeft="0.25"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.25" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Medium.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.25"
+        BottomRight="0.25"
+        BottomLeft="0" />
     <Style
         x:Key="BootstrapControls.Button.Medium"
         TargetType="Button"
@@ -164,6 +210,29 @@
         <Setter
             Property="mah:ControlsHelper.CornerRadius"
             Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <bs4:DoubleMultiplicationConverter
@@ -181,6 +250,18 @@
         TopRight="0.3"
         BottomRight="0.3"
         BottomLeft="0.3" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Large.CornerRadiusConverter.Left"
+        TopLeft="0.3"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.3" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Button.Large.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.3"
+        BottomRight="0.3"
+        BottomLeft="0" />
     <Style
         x:Key="BootstrapControls.Button.Large"
         TargetType="Button"
@@ -194,5 +275,28 @@
         <Setter
             Property="mah:ControlsHelper.CornerRadius"
             Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

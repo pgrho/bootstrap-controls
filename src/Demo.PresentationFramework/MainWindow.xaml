@@ -60,6 +60,30 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.Button.Large" />
+                    <StackPanel
+                        Margin="8"
+                        Orientation="Horizontal">
+                        <Button
+                            Style="{StaticResource BootstrapControls.Button.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="Left"
+                            IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
+                            Content="CornerRadiusMode=Left" />
+                        <Button
+                            Style="{StaticResource BootstrapControls.Button.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="None"
+                            IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
+                            Margin="-1 0 0 0"
+                            Content="CornerRadiusMode=None" />
+                        <Button
+                            Style="{StaticResource BootstrapControls.Button.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="Right"
+                            IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
+                            Margin="-1 0 0 0"
+                            Content="CornerRadiusMode=Right" />
+                    </StackPanel>
                 </StackPanel>
             </Expander>
 
