@@ -6,7 +6,7 @@ using System.Windows.Data;
 namespace Shipwreck.BootstrapControls
 {
     [ValueConversion(typeof(double), typeof(CornerRadius))]
-    internal sealed class DoubleToCornerRadiusConverter : IValueConverter
+    public sealed class DoubleToCornerRadiusConverter : IValueConverter
     {
         public double TopLeft { get; set; } = 1;
 

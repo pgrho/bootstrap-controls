@@ -6,7 +6,7 @@ using System.Windows.Data;
 namespace Shipwreck.BootstrapControls
 {
     [ValueConversion(typeof(double), typeof(Thickness))]
-    internal sealed class DoubleToThicknessConverter : IValueConverter
+    public sealed class DoubleToThicknessConverter : IValueConverter
     {
         public double Left { get; set; } = 1;
 

@@ -5,7 +5,7 @@ using System.Windows.Data;
 namespace Shipwreck.BootstrapControls
 {
     [ValueConversion(typeof(double), typeof(double))]
-    internal sealed class DoubleMultiplicationConverter : IValueConverter
+    public sealed class DoubleMultiplicationConverter : IValueConverter
     {
         public double Coefficient { get; set; } = 1;
 
