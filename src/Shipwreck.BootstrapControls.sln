@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30914.41
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{6DED9548-47E5-4118-9563-9E301D268566}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		Directory.build.props = Directory.build.props
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shipwreck.BootstrapControls.Shared", "Shared\Shipwreck.BootstrapControls.Shared.shproj", "{35BB9748-7738-45F7-B7C7-751346C985D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipwreck.BootstrapControls.PresentationFramework", "PresentationFramework\Shipwreck.BootstrapControls.PresentationFramework.csproj", "{3B14B45E-E672-4AF7-8820-B6D41A7126BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipwreck.BootstrapControls.XamarinForms", "XamarinForms\Shipwreck.BootstrapControls.XamarinForms.csproj", "{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shipwreck.BootstrapControls.Shared.projitems*{3b14b45e-e672-4af7-8820-b6d41a7126bb}*SharedItemsImports = 5
+		Shared\Shipwreck.BootstrapControls.Shared.projitems*{cee6bfed-7eb8-4125-b985-fe3ea20fed79}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|x64.Build.0 = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|x64.ActiveCfg = Release|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|x64.Build.0 = Release|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B14B45E-E672-4AF7-8820-B6D41A7126BB}.Release|x86.Build.0 = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|x64.Build.0 = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Debug|x86.Build.0 = Debug|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|x64.ActiveCfg = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|x64.Build.0 = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|x86.ActiveCfg = Release|Any CPU
+		{CEE6BFED-7EB8-4125-B985-FE3EA20FED79}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E8D9DE0-ED38-4536-8EB0-89D7AD15F4AB}
+	EndGlobalSection
+EndGlobal
