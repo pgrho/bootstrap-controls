@@ -4,11 +4,11 @@
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:bs4="clr-namespace:Shipwreck.BootstrapControls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary
-            Source="Controls.Buttons.xaml" />
-        <ResourceDictionary
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.Buttons.xaml" />
+        <bs4:SharedResourceDictionary
             Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ContentControl.xaml" />
-        <ResourceDictionary
+        <bs4:SharedResourceDictionary
             Source="pack://application:,,,/MahApps.Metro;component/Themes/SplitButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style
@@ -261,7 +261,7 @@
         </Style.Triggers>
     </Style>
     <bs4:DoubleToThicknessConverter
-        x:Key="BootstrapControls.SplitButton.Medium.SplitPaddingConverter"
+        x:Key="BootstrapControls.SplitButton.Medium.ArrowPaddingConverter"
         Left="0.5625"
         Top="0.375"
         Right="0.5625"

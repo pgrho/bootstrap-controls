@@ -4,7 +4,7 @@
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:bs4="clr-namespace:Shipwreck.BootstrapControls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary
+        <bs4:SharedResourceDictionary
             Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Buttons.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style
