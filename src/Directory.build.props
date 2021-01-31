@@ -12,7 +12,7 @@
   <Target Name="PostPack"
           AfterTargets="Pack"
           Condition="'$(GeneratePackageOnBuild)'=='true'">
-    <Exec Command="XCOPY &quot;$(MSBuildProjectDirectory)\bin\Release\$(MSBuildProjectName).*.nupkg&quot; &quot;$(MSBuildProjectDirectory)\..\..\..\nuget\Release&quot; /D /C /I /Y /F"
+    <Exec Command="XCOPY &quot;$(MSBuildProjectDirectory)\bin\Release\$(MSBuildProjectName).*.nupkg&quot; &quot;$(MSBuildProjectDirectory)\..\..\nuget\Release&quot; /D /C /I /Y /F"
           ContinueOnError="WarnAndContinue"/>
   </Target>
 </Project>
