@@ -12,7 +12,7 @@
     Width="800">
     <Window.Resources>
         <ResourceDictionary
-            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.Buttons.xaml" />
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
     </Window.Resources>
     <ScrollViewer
         HorizontalScrollBarVisibility="Hidden"
@@ -86,7 +86,58 @@
                     </StackPanel>
                 </StackPanel>
             </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
+                        FontSize="24">SplitButton Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <ComboBox
+                        x:Name="splitButtonSchemeCoomboBox"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        SelectedItem="{x:Static bs4:ColorScheme.OutlineSecondary}"
+                        DisplayMemberPath="Name" />
+                    <CheckBox
+                        x:Name="splitButtonsAreEnabledCheckBox"
+                        IsChecked="True">IsEnabled</CheckBox>
 
+                    <bs4:SplitButton
+                        Style="{StaticResource BootstrapControls.SplitButton.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.SplitButton.Small"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+
+                    <bs4:SplitButton
+                        Style="{StaticResource BootstrapControls.SplitButton.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.SplitButton.Medium"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+
+                    <bs4:SplitButton
+                        Style="{StaticResource BootstrapControls.SplitButton.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.SplitButton.Large"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+
+                </StackPanel>
+            </Expander>
         </StackPanel>
     </ScrollViewer>
 </Window>
