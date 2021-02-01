@@ -17,6 +17,10 @@
     <Compile Remove="**\*.ios.cs" />
   </ItemGroup>
 
+  <ItemGroup Condition="$(TargetFramework.StartsWith('netstandard'))">
+    <None Include="**\*.android.cs" />
+    <None Include="**\*.ios.cs" />
+  </ItemGroup>
   <ItemGroup Condition="$(TargetFramework.StartsWith('MonoAndroid'))">
     <Compile Include="**\*.android.cs" />
     <None Include="**\*.ios.cs" />
