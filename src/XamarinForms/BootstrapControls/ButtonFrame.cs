@@ -22,7 +22,7 @@ namespace Shipwreck.BootstrapControls
             = BindableProperty.Create(nameof(Scheme), typeof(ColorScheme), typeof(ButtonFrame), defaultValue: ColorScheme.OutlineSecondary, propertyChanged: SetColors);
 
         public static readonly BindableProperty TextColorProperty
-            = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ButtonFrame), defaultValue: ColorScheme.OutlineSecondary.TextColor);
+            = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ButtonFrame), defaultValue: ColorScheme.GetColor(ColorScheme.OutlineSecondary.TextColor));
 
         public ButtonFrame()
         {

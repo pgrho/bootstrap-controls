@@ -6,7 +6,7 @@ namespace Shipwreck.BootstrapControls
     public partial class ColorScheme
     {
         public static Color GetColor(int bgra)
-            => Color.FromRgba((bgra >> 24) & 0xff, (bgra >> 16) & 0xff, (bgra >> 8) & 0xff, bgra & 0xff);
+            => Color.FromRgba((bgra >> 8) & 0xff, (bgra >> 16) & 0xff, (bgra >> 24) & 0xff, bgra & 0xff);
 
         internal static Color AsRgb(Color c)
             => Color.FromRgb(
