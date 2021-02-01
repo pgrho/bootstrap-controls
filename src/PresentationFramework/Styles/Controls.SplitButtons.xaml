@@ -74,7 +74,7 @@
                                     Style="{TemplateBinding ButtonStyle}"
                                     bs4:ColorScheme.Scheme="{TemplateBinding bs4:ColorScheme.Scheme}"
                                     bs4:BootstrapHelper.Rem="{TemplateBinding bs4:BootstrapHelper.Rem}"
-                                    bs4:BootstrapHelper.CornerRadiusMode="Left">
+                                    bs4:BootstrapHelper.CornerRadiusMode="None">
                                     <DockPanel
                                         x:Name="PART_Content"
                                         Focusable="False"
@@ -128,8 +128,7 @@
                                     Padding="{TemplateBinding ArrowPadding}"
                                     bs4:ColorScheme.Scheme="{TemplateBinding bs4:ColorScheme.Scheme}"
                                     bs4:BootstrapHelper.Rem="{TemplateBinding bs4:BootstrapHelper.Rem}"
-                                    bs4:BootstrapHelper.CornerRadiusMode="Right">
-                                    <!--  Material - ChevronDown  -->
+                                    bs4:BootstrapHelper.CornerRadiusMode="None"> 
                                     <ContentControl
                                         x:Name="PART_Arrow"
                                         Width="9"

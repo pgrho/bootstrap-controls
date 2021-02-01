@@ -89,6 +89,18 @@ namespace Shipwreck.BootstrapControls
 
         #endregion ArrowPadding
 
+        #region CornerRadiusMode
+
+        public static readonly DependencyProperty CornerRadiusModeProperty = BootstrapHelper.CornerRadiusModeProperty.AddOwner(typeof(SplitButton));
+
+        public CornerRadiusMode CornerRadiusMode
+        {
+            get => (CornerRadiusMode)GetValue(CornerRadiusModeProperty);
+            set => SetValue(CornerRadiusModeProperty, value);
+        }
+
+        #endregion CornerRadiusMode
+
         protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             IsPressed = true;
