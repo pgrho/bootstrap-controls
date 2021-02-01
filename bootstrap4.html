@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        const cores = ['', 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark', 'link'];
+        const prefixes = ['', 'outline-'];
+        const states = ['', 'disabled', 'active'/*, 'hover'*/, 'focus'];
+
+        const table = document.createElement('table');
+        document.body.appendChild(table);
+        {
+            const tr = document.createElement('tr');
+            table.appendChild(tr);
+
+            let th = document.createElement('th');
+            th.innerHTML = 'prefix';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'class';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'state';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'opacity';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'color';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'backgroundColor';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'borderTopColor';
+            tr.appendChild(th);
+
+            th = document.createElement('th');
+            th.innerHTML = 'boxShadow';
+            tr.appendChild(th);
+        }
+
+        function getRgba(v) {
+            if (/^rgb\((\d+), (\d+), (\d+)\)/.test(v)) {
+                return 'FromRgba(' + RegExp.$1 + ', ' + RegExp.$2 + ', ' + RegExp.$3 + ', 255)'
+            }
+            if (/^rgba\((\d+), (\d+), (\d+), (0\.\d+)\)/.test(v)) {
+                return 'FromRgba(' + RegExp.$1 + ', ' + RegExp.$2 + ', ' + RegExp.$3 + ', ' + Math.round(RegExp.$4 * 255) + ')';
+            }
+            return 'FromRgba(0, 0, 0, 0)';
+        }
+
+        let cs = '';
+        for (let c of cores) {
+            for (let p of prefixes) {
+                if ((c === '' || c === 'link') && p === 'outline-') {
+                    continue;
+                }
+                const propertyName = (c === '' ? 'Default' : c.charAt(0).toUpperCase() + c.substring(1));
+                cs += 'public static readonly ColorScheme ' + (p === 'outline-' ? 'Outline' : '') + propertyName + " = new ColorScheme()\n{\n";
+                cs += "    Name = \"" + propertyName + "\",\r\n";
+                for (let s of states) {
+
+                    const tr = document.createElement('tr');
+                    table.appendChild(tr);
+
+                    let td = document.createElement('td');
+                    td.innerHTML = p;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = c;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = s;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    const btn = document.createElement('button');
+                    btn.innerHTML = btn.className = 'btn btn-sm btn-' + p + c + ' ' + s;
+                    td.appendChild(btn);
+                    tr.appendChild(td);
+
+                    const style = window.getComputedStyle(btn);
+
+                    td = document.createElement('td');
+                    td.innerHTML = style.opacity;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = style.color;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = style.backgroundColor;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = style.borderTopColor;
+                    tr.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerHTML = style.boxShadow;
+                    tr.appendChild(td);
+
+                    switch (s) {
+                        case '':
+                            cs += '    TextColor = ' + getRgba(style.color) + ",\n";
+                            cs += '    BackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    BorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                            break;
+                        case 'active':
+                            cs += '    ActiveTextColor = ' + getRgba(style.color) + ",\n";
+                            cs += '    ActiveBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    ActiveBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                            break;
+                        /*
+                    case 'hover':
+                        cs += '    HoverBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
+                        cs += '    HoverBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                        break;
+                        */
+                        case 'focus':
+                            cs += '    FocusBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    FocusBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                            cs += '    FocusShadowColor = ' + getRgba(style.boxShadow) + ",\n";
+                            break;
+                    }
+                }
+                cs += "};\n";
+            }
+        }
+        const pre = document.createElement('pre');
+        pre.appendChild(document.createTextNode(cs));
+        document.body.appendChild(pre);
+    </script>
+</body>
+
+</html>
