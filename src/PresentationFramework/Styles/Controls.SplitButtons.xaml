@@ -45,7 +45,7 @@
                     TargetType="{x:Type bs4:SplitButton}">
                     <Border
                         x:Name="PART_Border"
-                        Background="Transparent"
+                        Background="{x:Null}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
@@ -53,8 +53,20 @@
                         UseLayoutRounding="True">
                         <mah:ClipBorder
                             x:Name="PART_ClipBorder"
-                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <mah:ClipBorder.CornerRadius>
+                                <MultiBinding>
+                                    <MultiBinding.Converter>
+                                        <bs4:CornerRadiusMinusThicknessConverter />
+                                    </MultiBinding.Converter>
+                                    <Binding
+                                        RelativeSource="{RelativeSource TemplatedParent}"
+                                        Path="(mah:ControlsHelper.CornerRadius)" />
+                                    <Binding
+                                        RelativeSource="{RelativeSource TemplatedParent}"
+                                        Path="BorderThickness" />
+                                </MultiBinding>
+                            </mah:ClipBorder.CornerRadius>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -72,6 +84,7 @@
                                     RenderOptions.ClearTypeHint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(RenderOptions.ClearTypeHint), Mode=OneWay}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                     Style="{TemplateBinding ButtonStyle}"
+                                    mah:ControlsHelper.CornerRadius="0"
                                     bs4:ColorScheme.Scheme="{TemplateBinding bs4:ColorScheme.Scheme}"
                                     bs4:BootstrapHelper.Rem="{TemplateBinding bs4:BootstrapHelper.Rem}"
                                     bs4:BootstrapHelper.CornerRadiusMode="None">
@@ -126,9 +139,10 @@
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                     Style="{TemplateBinding ButtonStyle}"
                                     Padding="{TemplateBinding ArrowPadding}"
+                                    mah:ControlsHelper.CornerRadius="0"
                                     bs4:ColorScheme.Scheme="{TemplateBinding bs4:ColorScheme.Scheme}"
                                     bs4:BootstrapHelper.Rem="{TemplateBinding bs4:BootstrapHelper.Rem}"
-                                    bs4:BootstrapHelper.CornerRadiusMode="None"> 
+                                    bs4:BootstrapHelper.CornerRadiusMode="None">
                                     <ContentControl
                                         x:Name="PART_Arrow"
                                         Width="9"

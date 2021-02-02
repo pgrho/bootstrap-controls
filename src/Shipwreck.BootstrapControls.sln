@@ -28,6 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipwreck.BootstrapControls
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shipwreck.BootstrapControls.Shared.projitems*{35bb9748-7738-45f7-b7c7-751346c985d8}*SharedItemsImports = 13
 		Shared\Shipwreck.BootstrapControls.Shared.projitems*{3b14b45e-e672-4af7-8820-b6d41a7126bb}*SharedItemsImports = 5
 		Shared\Shipwreck.BootstrapControls.Shared.projitems*{cee6bfed-7eb8-4125-b985-fe3ea20fed79}*SharedItemsImports = 5
 	EndGlobalSection
