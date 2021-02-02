@@ -67,7 +67,8 @@
                                         Path="BorderThickness" />
                                 </MultiBinding>
                             </mah:ClipBorder.CornerRadius>
-                            <Grid>
+                            <Grid
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
                                     <ColumnDefinition
@@ -80,6 +81,7 @@
                                     HorizontalContentAlignment="Stretch"
                                     VerticalContentAlignment="Stretch"
                                     BorderThickness="0"
+                                    Padding="0"
                                     FocusVisualStyle="{TemplateBinding FocusVisualStyle}"
                                     RenderOptions.ClearTypeHint="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(RenderOptions.ClearTypeHint), Mode=OneWay}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -108,9 +110,9 @@
                                                 UseLayoutRounding="False" />
                                             <mah:ContentControlEx
                                                 x:Name="PART_ButtonContent"
-                                                Padding="{TemplateBinding Padding}"
                                                 HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
+                                                Padding="{TemplateBinding Padding}"
                                                 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                                 Content="{Binding Content, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
