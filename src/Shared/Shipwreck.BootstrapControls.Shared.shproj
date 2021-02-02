@@ -14,11 +14,9 @@
   <ItemGroup>
     <Compile Include="BootstrapControls\ColorScheme.cs" />
     <Compile Include="BootstrapControls\ColorSchemeConverter.cs" />
+    <Compile Include="BootstrapControls\ContainerWidthConverter.cs" />
     <Compile Include="XMLNS.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Shipwreck.BootstrapControls.Shared.projitems" />
-  </ItemGroup>
-  <Import Project="Shipwreck.ViewModelUtils.Bootstrap4.Shared.projitems" Label="Shared" />
+  <Import Project="Shipwreck.BootstrapControls.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
 </Project>
