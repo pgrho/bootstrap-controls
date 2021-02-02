@@ -1,18 +1,25 @@
 ﻿<Window
     x:Class="Shipwreck.BootstrapControls.Demo.PresentationFramework.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:bs4="http://schema.shipwreck.jp/bootstrap-controls/"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:Shipwreck.BootstrapControls.Demo.PresentationFramework"
     mc:Ignorable="d"
     Title="MainWindow"
     Height="450"
     Width="800">
     <Window.Resources>
-        <ResourceDictionary
-            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DropDownButtons.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <ScrollViewer
         HorizontalScrollBarVisibility="Hidden"
@@ -90,6 +97,57 @@
                 IsExpanded="True">
                 <Expander.Header>
                     <TextBlock
+                        FontSize="24">DropDownButton Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <ComboBox
+                        x:Name="DropDownButtonSchemeCoomboBox"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        SelectedItem="{x:Static bs4:ColorScheme.OutlineSecondary}"
+                        DisplayMemberPath="Name" />
+                    <CheckBox
+                        x:Name="DropDownButtonsAreEnabledCheckBox"
+                        IsChecked="True">IsEnabled</CheckBox>
+
+                    <mah:DropDownButton
+                        Style="{StaticResource BootstrapControls.DropDownButton.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.DropDownButton.Small"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+
+                    <mah:DropDownButton
+                        Style="{StaticResource BootstrapControls.DropDownButton.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.DropDownButton.Medium"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+
+                    <mah:DropDownButton
+                        Style="{StaticResource BootstrapControls.DropDownButton.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.DropDownButton.Large"
+                        ItemsSource="{x:Static local:MainWindow.Schemes}"
+                        DisplayMemberPath="Name" />
+                </StackPanel>
+            </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
                         FontSize="24">SplitButton Styles</TextBlock>
                 </Expander.Header>
                 <StackPanel
@@ -135,7 +193,6 @@
                         Content="BootstrapControls.SplitButton.Large"
                         ItemsSource="{x:Static local:MainWindow.Schemes}"
                         DisplayMemberPath="Name" />
-
                 </StackPanel>
             </Expander>
         </StackPanel>
