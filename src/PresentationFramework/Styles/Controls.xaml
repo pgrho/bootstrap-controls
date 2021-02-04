@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:bs4="clr-namespace:Shipwreck.BootstrapControls">
+    <ResourceDictionary.MergedDictionaries>
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.Buttons.xaml" />
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DropDownButtons.xaml" />
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

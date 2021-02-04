@@ -174,7 +174,7 @@
             Value="{StaticResource BootstrapControls.Button.Small}" />
         <Setter
             Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.FontSizeConverter}}" />
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.FontSizeConverter}}" />
     </Style>
     <Style
         x:Key="BootstrapControls.DropDownButton.Medium"
@@ -185,7 +185,7 @@
             Value="{StaticResource BootstrapControls.Button.Medium}" />
         <Setter
             Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.FontSizeConverter}}" />
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.FontSizeConverter}}" />
     </Style>
     <Style
         x:Key="BootstrapControls.DropDownButton.Large"
@@ -196,6 +196,6 @@
             Value="{StaticResource BootstrapControls.Button.Large}" />
         <Setter
             Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.FontSizeConverter}}" />
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.FontSizeConverter}}" />
     </Style>
 </ResourceDictionary>

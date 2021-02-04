@@ -232,146 +232,68 @@
         Top="0.25"
         Right="0.375"
         Bottom="0.25" />
-    <Style
-        x:Key="BootstrapControls.SplitButton.Small"
-        TargetType="{x:Type bs4:SplitButton}"
-        BasedOn="{StaticResource BootstrapControls.SplitButton.Core}">
-        <Setter
-            Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.FontSizeConverter}}" />
-        <Setter
-            Property="Padding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.PaddingConverter}}" />
-        <Setter
-            Property="ArrowPadding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Small.ArrowPaddingConverter}}" />
-        <Setter
-            Property="ButtonStyle"
-            Value="{StaticResource BootstrapControls.Button.Small}" />
-        <Setter
-            Property="mah:ControlsHelper.CornerRadius"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter}}" />
-        <Style.Triggers>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Left">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter.Left}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Right">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Small.CornerRadiusConverter.Right}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="None">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="0" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
+ 
     <bs4:DoubleToThicknessConverter
         x:Key="BootstrapControls.SplitButton.Medium.ArrowPaddingConverter"
         Left="0.5625"
         Top="0.375"
         Right="0.5625"
-        Bottom="0.375" />
-    <Style
-        x:Key="BootstrapControls.SplitButton.Medium"
-        TargetType="{x:Type bs4:SplitButton}"
-        BasedOn="{StaticResource BootstrapControls.SplitButton.Core}">
-        <Setter
-            Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.FontSizeConverter}}" />
-        <Setter
-            Property="Padding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.PaddingConverter}}" />
-        <Setter
-            Property="ArrowPadding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Medium.ArrowPaddingConverter}}" />
-        <Setter
-            Property="ButtonStyle"
-            Value="{StaticResource BootstrapControls.Button.Medium}" />
-        <Setter
-            Property="mah:ControlsHelper.CornerRadius"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter}}" />
-        <Style.Triggers>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Left">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter.Left}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Right">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Medium.CornerRadiusConverter.Right}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="None">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="0" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
+        Bottom="0.375" /> 
     <bs4:DoubleToThicknessConverter
         x:Key="BootstrapControls.SplitButton.Large.ArrowPaddingConverter"
         Left="0.75"
         Top="0.5"
         Right="0.75"
         Bottom="0.5" />
-    <Style
+    <bs4:StyleMixer
+        x:Key="BootstrapControls.SplitButton.Small"
+        TargetType="bs4:SplitButton">
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.SplitButton.Core" />
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.Control.Small" />
+        <Style
+            TargetType="bs4:SplitButton">
+            <Setter
+                Property="ArrowPadding"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Small.ArrowPaddingConverter}}" />
+            <Setter
+                Property="ButtonStyle"
+                Value="{StaticResource BootstrapControls.Button.Small}" />
+        </Style>
+    </bs4:StyleMixer>
+    <bs4:StyleMixer
+        x:Key="BootstrapControls.SplitButton.Medium"
+        TargetType="bs4:SplitButton">
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.SplitButton.Core" />
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.Control.Medium" />
+        <Style
+            TargetType="bs4:SplitButton">
+            <Setter
+                Property="ArrowPadding"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Medium.ArrowPaddingConverter}}" />
+            <Setter
+                Property="ButtonStyle"
+                Value="{StaticResource BootstrapControls.Button.Medium}" />
+        </Style>
+    </bs4:StyleMixer>
+    <bs4:StyleMixer
         x:Key="BootstrapControls.SplitButton.Large"
-        TargetType="{x:Type bs4:SplitButton}"
-        BasedOn="{StaticResource BootstrapControls.SplitButton.Core}">
-        <Setter
-            Property="FontSize"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.FontSizeConverter}}" />
-        <Setter
-            Property="Padding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.PaddingConverter}}" />
-        <Setter
-            Property="ArrowPadding"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Large.ArrowPaddingConverter}}" />
-        <Setter
-            Property="ButtonStyle"
-            Value="{StaticResource BootstrapControls.Button.Large}" />
-        <Setter
-            Property="mah:ControlsHelper.CornerRadius"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter}}" />
-
-        <Style.Triggers>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Left">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter.Left}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="Right">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Button.Large.CornerRadiusConverter.Right}}" />
-            </Trigger>
-            <Trigger
-                Property="bs4:BootstrapHelper.CornerRadiusMode"
-                Value="None">
-                <Setter
-                    Property="mah:ControlsHelper.CornerRadius"
-                    Value="0" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
+        TargetType="bs4:SplitButton">
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.SplitButton.Core" />
+        <StaticResourceExtension
+            ResourceKey="BootstrapControls.Control.Large" />
+        <Style
+            TargetType="bs4:SplitButton">
+            <Setter
+                Property="ArrowPadding"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.SplitButton.Large.ArrowPaddingConverter}}" />
+            <Setter
+                Property="ButtonStyle"
+                Value="{StaticResource BootstrapControls.Button.Large}" />
+        </Style>
+    </bs4:StyleMixer>
 </ResourceDictionary>

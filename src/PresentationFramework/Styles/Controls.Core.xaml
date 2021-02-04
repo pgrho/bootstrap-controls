@@ -1,0 +1,196 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:bs4="clr-namespace:Shipwreck.BootstrapControls">
+    <bs4:DoubleMultiplicationConverter
+        x:Key="BootstrapControls.Control.Small.FontSizeConverter"
+        Coefficient="0.875" />
+    <bs4:DoubleToThicknessConverter
+        x:Key="BootstrapControls.Control.Small.PaddingConverter"
+        Left="0.5"
+        Top="0.25"
+        Right="0.5"
+        Bottom="0.25" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Small.CornerRadiusConverter"
+        TopLeft="0.2"
+        TopRight="0.2"
+        BottomRight="0.2"
+        BottomLeft="0.2" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Small.CornerRadiusConverter.Left"
+        TopLeft="0.2"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.2" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Small.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.2"
+        BottomRight="0.2"
+        BottomLeft="0" />
+    <Style
+        x:Key="BootstrapControls.Control.Small"
+        TargetType="Button">
+        <Setter
+            Property="FontSize"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.FontSizeConverter}}" />
+        <Setter
+            Property="Padding"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.PaddingConverter}}" />
+        <Setter
+            Property="mah:ControlsHelper.CornerRadius"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Small.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <bs4:DoubleMultiplicationConverter
+        x:Key="BootstrapControls.Control.Medium.FontSizeConverter"
+        Coefficient="1" />
+    <bs4:DoubleToThicknessConverter
+        x:Key="BootstrapControls.Control.Medium.PaddingConverter"
+        Left="0.75"
+        Top="0.375"
+        Right="0.75"
+        Bottom="0.375" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Medium.CornerRadiusConverter"
+        TopLeft="0.25"
+        TopRight="0.25"
+        BottomRight="0.25"
+        BottomLeft="0.25" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Medium.CornerRadiusConverter.Left"
+        TopLeft="0.25"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.25" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Medium.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.25"
+        BottomRight="0.25"
+        BottomLeft="0" />
+    <Style
+        x:Key="BootstrapControls.Control.Medium"
+        TargetType="Button">
+        <Setter
+            Property="FontSize"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.FontSizeConverter}}" />
+        <Setter
+            Property="Padding"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.PaddingConverter}}" />
+        <Setter
+            Property="mah:ControlsHelper.CornerRadius"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Medium.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <bs4:DoubleMultiplicationConverter
+        x:Key="BootstrapControls.Control.Large.FontSizeConverter"
+        Coefficient="1.25" />
+    <bs4:DoubleToThicknessConverter
+        x:Key="BootstrapControls.Control.Large.PaddingConverter"
+        Left="1"
+        Top="0.5"
+        Right="1"
+        Bottom="0.5" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Large.CornerRadiusConverter"
+        TopLeft="0.3"
+        TopRight="0.3"
+        BottomRight="0.3"
+        BottomLeft="0.3" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Large.CornerRadiusConverter.Left"
+        TopLeft="0.3"
+        TopRight="0"
+        BottomRight="0"
+        BottomLeft="0.3" />
+    <bs4:DoubleToCornerRadiusConverter
+        x:Key="BootstrapControls.Control.Large.CornerRadiusConverter.Right"
+        TopLeft="0"
+        TopRight="0.3"
+        BottomRight="0.3"
+        BottomLeft="0" />
+    <Style
+        x:Key="BootstrapControls.Control.Large"
+        TargetType="Control">
+        <Setter
+            Property="FontSize"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.FontSizeConverter}}" />
+        <Setter
+            Property="Padding"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.PaddingConverter}}" />
+        <Setter
+            Property="mah:ControlsHelper.CornerRadius"
+            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.CornerRadiusConverter}}" />
+        <Style.Triggers>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Left">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.CornerRadiusConverter.Left}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="Right">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:BootstrapHelper.Rem), Converter={StaticResource BootstrapControls.Control.Large.CornerRadiusConverter.Right}}" />
+            </Trigger>
+            <Trigger
+                Property="bs4:BootstrapHelper.CornerRadiusMode"
+                Value="None">
+                <Setter
+                    Property="mah:ControlsHelper.CornerRadius"
+                    Value="0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
