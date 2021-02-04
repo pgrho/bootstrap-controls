@@ -15,9 +15,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
-                    Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DropDownButtons.xaml" />
-                <ResourceDictionary
-                    Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
+                    Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -35,7 +33,7 @@
                 <StackPanel
                     Margin="8">
                     <ComboBox
-                        x:Name="buttonSchemeCoomboBox"
+                        x:Name="buttonSchemeComboBox"
                         ItemsSource="{x:Static local:MainWindow.Schemes}"
                         SelectedItem="{x:Static bs4:ColorScheme.OutlineSecondary}"
                         DisplayMemberPath="Name" />
@@ -45,7 +43,7 @@
 
                     <Button
                         Style="{StaticResource BootstrapControls.Button.Small}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -53,7 +51,7 @@
                         Content="BootstrapControls.Button.Small" />
                     <Button
                         Style="{StaticResource BootstrapControls.Button.Medium}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -61,7 +59,7 @@
                         Content="BootstrapControls.Button.Medium" />
                     <Button
                         Style="{StaticResource BootstrapControls.Button.Large}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -72,20 +70,20 @@
                         Orientation="Horizontal">
                         <Button
                             Style="{StaticResource BootstrapControls.Button.Medium}"
-                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                             bs4:BootstrapHelper.CornerRadiusMode="Left"
                             IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                             Content="CornerRadiusMode=Left" />
                         <Button
                             Style="{StaticResource BootstrapControls.Button.Medium}"
-                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                             bs4:BootstrapHelper.CornerRadiusMode="None"
                             IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                             Margin="-1 0 0 0"
                             Content="CornerRadiusMode=None" />
                         <Button
                             Style="{StaticResource BootstrapControls.Button.Medium}"
-                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeCoomboBox, Path=SelectedItem}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=buttonSchemeComboBox, Path=SelectedItem}"
                             bs4:BootstrapHelper.CornerRadiusMode="Right"
                             IsEnabled="{Binding ElementName=buttonsAreEnabledCheckBox, Path=IsChecked}"
                             Margin="-1 0 0 0"
@@ -102,7 +100,7 @@
                 <StackPanel
                     Margin="8">
                     <ComboBox
-                        x:Name="DropDownButtonSchemeCoomboBox"
+                        x:Name="DropDownButtonSchemeComboBox"
                         ItemsSource="{x:Static local:MainWindow.Schemes}"
                         SelectedItem="{x:Static bs4:ColorScheme.OutlineSecondary}"
                         DisplayMemberPath="Name" />
@@ -112,7 +110,7 @@
 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Small}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -123,7 +121,7 @@
 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Medium}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -134,7 +132,7 @@
 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Large}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=DropDownButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=DropDownButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -153,7 +151,7 @@
                 <StackPanel
                     Margin="8">
                     <ComboBox
-                        x:Name="splitButtonSchemeCoomboBox"
+                        x:Name="splitButtonSchemeComboBox"
                         ItemsSource="{x:Static local:MainWindow.Schemes}"
                         SelectedItem="{x:Static bs4:ColorScheme.OutlineSecondary}"
                         DisplayMemberPath="Name" />
@@ -163,7 +161,7 @@
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Small}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -174,7 +172,7 @@
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Medium}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -185,7 +183,7 @@
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Large}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeCoomboBox, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=splitButtonSchemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=splitButtonsAreEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -193,6 +191,52 @@
                         Content="BootstrapControls.SplitButton.Large"
                         ItemsSource="{x:Static local:MainWindow.Schemes}"
                         DisplayMemberPath="Name" />
+                </StackPanel>
+            </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
+                        FontSize="24">TextBox Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <CheckBox
+                        x:Name="TextBoxsAreEnabledCheckBox"
+                        IsChecked="True">IsEnabled</CheckBox>
+                    <CheckBox
+                        x:Name="TextBoxsAreReadOnlyCheckBox"
+                        IsChecked="False">IsReadOnly</CheckBox>
+
+                    <TextBox
+                        Style="{StaticResource BootstrapControls.TextBox.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=TextBoxSchemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=TextBoxsAreEnabledCheckBox, Path=IsChecked}"
+                        IsReadOnly="{Binding ElementName=TextBoxsAreReadOnlyCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Text="BootstrapControls.TextBox.Small" />
+
+                    <TextBox
+                        Style="{StaticResource BootstrapControls.TextBox.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=TextBoxSchemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=TextBoxsAreEnabledCheckBox, Path=IsChecked}"
+                        IsReadOnly="{Binding ElementName=TextBoxsAreReadOnlyCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Text="BootstrapControls.TextBox.Medium" />
+
+                    <TextBox
+                        Style="{StaticResource BootstrapControls.TextBox.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=TextBoxSchemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=TextBoxsAreEnabledCheckBox, Path=IsChecked}"
+                        IsReadOnly="{Binding ElementName=TextBoxsAreReadOnlyCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Text="BootstrapControls.TextBox.Large" />
                 </StackPanel>
             </Expander>
         </StackPanel>
