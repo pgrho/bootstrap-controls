@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 
 namespace Shipwreck.BootstrapControls.Demo.PresentationFramework
 {
@@ -30,5 +32,8 @@ namespace Shipwreck.BootstrapControls.Demo.PresentationFramework
             ColorScheme.Link,
             ColorScheme.Default,
         };
+
+        public static IEnumerable<ColorScheme> OutlineSchemes
+            => Schemes.Where(e => e.Name.StartsWith("Outline") || Schemes.All(a => a.Name != "Outline" + e.Name));
     }
 }

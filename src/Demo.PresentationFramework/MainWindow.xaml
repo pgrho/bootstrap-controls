@@ -17,6 +17,14 @@
                 <ResourceDictionary
                     Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="MenuItemStyle"
+                TargetType="MenuItem"
+                BasedOn="{StaticResource BootstrapControls.MenuItem.Medium}">
+                <Setter
+                    Property="bs4:ColorScheme.Scheme"
+                    Value="{Binding}" />
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
     <ScrollViewer
@@ -99,7 +107,7 @@
                         FontSize="24">DropDownButton Styles</TextBlock>
                 </Expander.Header>
                 <StackPanel
-                    Margin="8">
+                    Margin="8"> 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Small}"
                         bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
@@ -108,8 +116,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.DropDownButton.Small"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Medium}"
@@ -119,8 +128,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.DropDownButton.Medium"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
 
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Large}"
@@ -130,8 +140,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.DropDownButton.Large"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
                 </StackPanel>
             </Expander>
             <Expander
@@ -150,8 +161,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.SplitButton.Small"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}"  />
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Medium}"
@@ -161,8 +173,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.SplitButton.Medium"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}"  />
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Large}"
@@ -172,8 +185,9 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Content="BootstrapControls.SplitButton.Large"
-                        ItemsSource="{x:Static local:MainWindow.Schemes}"
-                        DisplayMemberPath="Name" />
+                        ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
+                        DisplayMemberPath="Name"
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
                 </StackPanel>
             </Expander>
             <Expander
