@@ -270,7 +270,7 @@
                     Margin="8">
                     <DatePicker
                         Style="{StaticResource BootstrapControls.DatePicker.Small}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -278,7 +278,7 @@
 
                     <DatePicker
                         Style="{StaticResource BootstrapControls.DatePicker.Medium}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"
@@ -286,7 +286,40 @@
 
                     <DatePicker
                         Style="{StaticResource BootstrapControls.DatePicker.Large}"
-                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+                </StackPanel>
+            </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
+                        FontSize="24">DateTimePicker Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <mah:DateTimePicker
+                        Style="{StaticResource BootstrapControls.DateTimePicker.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <mah:DateTimePicker
+                        Style="{StaticResource BootstrapControls.DateTimePicker.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <mah:DateTimePicker
+                        Style="{StaticResource BootstrapControls.DateTimePicker.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
                         IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Left"

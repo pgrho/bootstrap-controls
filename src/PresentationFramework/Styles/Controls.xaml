@@ -5,14 +5,16 @@
         <bs4:SharedResourceDictionary
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.Buttons.xaml" />
         <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.ComboBoxes.xaml" />
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DatePickers.xaml" />
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DateTimePickers.xaml" />
+        <bs4:SharedResourceDictionary
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DropDownButtons.xaml" />
         <bs4:SharedResourceDictionary
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
         <bs4:SharedResourceDictionary
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.TextBoxes.xaml" />
-        <bs4:SharedResourceDictionary
-            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.ComboBoxes.xaml" />
-        <bs4:SharedResourceDictionary
-            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.DatePickers.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
