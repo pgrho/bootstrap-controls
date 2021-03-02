@@ -10,5 +10,7 @@
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.SplitButtons.xaml" />
         <bs4:SharedResourceDictionary
             Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.TextBoxes.xaml" />
+        <bs4:SharedResourceDictionary
+            Source="pack://application:,,,/Shipwreck.BootstrapControls.PresentationFramework;component/Styles/Controls.ComboBoxes.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
