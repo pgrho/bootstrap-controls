@@ -260,6 +260,39 @@
                         DisplayMemberPath="Name" />
                 </StackPanel>
             </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
+                        FontSize="24">DatePicker Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <DatePicker
+                        Style="{StaticResource BootstrapControls.DatePicker.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <DatePicker
+                        Style="{StaticResource BootstrapControls.DatePicker.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <DatePicker
+                        Style="{StaticResource BootstrapControls.DatePicker.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeDatePicker, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+                </StackPanel>
+            </Expander>
         </StackPanel>
     </ScrollViewer>
 </Window>
