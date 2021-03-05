@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{6DED95
 		..\.gitignore = ..\.gitignore
 		..\bootstrap4.html = ..\bootstrap4.html
 		Directory.build.props = Directory.build.props
+		..\nuget-push.ps1 = ..\nuget-push.ps1
+		..\remove-nupkg.ps1 = ..\remove-nupkg.ps1
 	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shipwreck.BootstrapControls.Shared", "Shared\Shipwreck.BootstrapControls.Shared.shproj", "{35BB9748-7738-45F7-B7C7-751346C985D8}"

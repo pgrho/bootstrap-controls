@@ -107,7 +107,7 @@
                         FontSize="24">DropDownButton Styles</TextBlock>
                 </Expander.Header>
                 <StackPanel
-                    Margin="8"> 
+                    Margin="8">
                     <mah:DropDownButton
                         Style="{StaticResource BootstrapControls.DropDownButton.Small}"
                         bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
@@ -163,7 +163,7 @@
                         Content="BootstrapControls.SplitButton.Small"
                         ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
                         DisplayMemberPath="Name"
-                        ItemContainerStyle="{StaticResource MenuItemStyle}"  />
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Medium}"
@@ -175,7 +175,7 @@
                         Content="BootstrapControls.SplitButton.Medium"
                         ItemsSource="{x:Static local:MainWindow.OutlineSchemes}"
                         DisplayMemberPath="Name"
-                        ItemContainerStyle="{StaticResource MenuItemStyle}"  />
+                        ItemContainerStyle="{StaticResource MenuItemStyle}" />
 
                     <bs4:SplitButton
                         Style="{StaticResource BootstrapControls.SplitButton.Large}"
@@ -227,6 +227,39 @@
                         HorizontalAlignment="Left"
                         Margin="8"
                         Text="BootstrapControls.TextBox.Large" />
+                </StackPanel>
+            </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
+                        FontSize="24">PasswordBox Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <PasswordBox
+                        Style="{StaticResource BootstrapControls.PasswordBox.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <PasswordBox
+                        Style="{StaticResource BootstrapControls.PasswordBox.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
+
+                    <PasswordBox
+                        Style="{StaticResource BootstrapControls.PasswordBox.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8" />
                 </StackPanel>
             </Expander>
             <Expander
