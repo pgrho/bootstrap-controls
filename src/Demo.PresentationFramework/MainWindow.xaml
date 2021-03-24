@@ -104,6 +104,64 @@
                 IsExpanded="True">
                 <Expander.Header>
                     <TextBlock
+                        FontSize="24">ToggleButton Styles</TextBlock>
+                </Expander.Header>
+                <StackPanel
+                    Margin="8">
+                    <ToggleButton
+                        Style="{StaticResource BootstrapControls.ToggleButton.Small}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.ToggleButton.Small" />
+                    <ToggleButton
+                        Style="{StaticResource BootstrapControls.ToggleButton.Medium}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.ToggleButton.Medium" />
+                    <ToggleButton
+                        Style="{StaticResource BootstrapControls.ToggleButton.Large}"
+                        bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                        IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="8"
+                        Content="BootstrapControls.ToggleButton.Large" />
+                    <StackPanel
+                        Margin="8"
+                        Orientation="Horizontal">
+                        <ToggleButton
+                            Style="{StaticResource BootstrapControls.ToggleButton.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="Left"
+                            IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                            Content="CornerRadiusMode=Left" />
+                        <ToggleButton
+                            Style="{StaticResource BootstrapControls.ToggleButton.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="None"
+                            IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                            Margin="-1 0 0 0"
+                            Content="CornerRadiusMode=None" />
+                        <ToggleButton
+                            Style="{StaticResource BootstrapControls.ToggleButton.Medium}"
+                            bs4:ColorScheme.Scheme="{Binding ElementName=schemeComboBox, Path=SelectedItem}"
+                            bs4:BootstrapHelper.CornerRadiusMode="Right"
+                            IsEnabled="{Binding ElementName=isEnabledCheckBox, Path=IsChecked}"
+                            Margin="-1 0 0 0"
+                            Content="CornerRadiusMode=Right" />
+                    </StackPanel>
+                </StackPanel>
+            </Expander>
+            <Expander
+                IsExpanded="True">
+                <Expander.Header>
+                    <TextBlock
                         FontSize="24">DropDownButton Styles</TextBlock>
                 </Expander.Header>
                 <StackPanel

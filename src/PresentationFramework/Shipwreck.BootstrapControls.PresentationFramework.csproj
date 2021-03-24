@@ -19,5 +19,11 @@
     <PackageReference Include="MahApps.Metro" Version="2.4.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Styles\Controls.ToggleButtons.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
   <Import Project="..\Shared\Shipwreck.BootstrapControls.Shared.projitems" Label="Shared" />
 </Project>
