@@ -22,7 +22,7 @@ namespace Shipwreck.BootstrapControls
             = BindableProperty.Create(nameof(Scheme), typeof(ColorScheme), typeof(ButtonFrame), defaultValue: ColorScheme.OutlineSecondary, propertyChanged: SetColors);
 
         public static readonly BindableProperty TextColorProperty
-            = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ButtonFrame), defaultValue: ColorScheme.GetColor(ColorScheme.OutlineSecondary.TextColor));
+            = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(ButtonFrame), defaultValue: ColorScheme.GetColor(ColorScheme.OutlineSecondary.Foreground));
 
         public ButtonFrame()
         {
@@ -106,21 +106,21 @@ namespace Shipwreck.BootstrapControls
 
                 if (IsEnabled && (IsPressed || IsActive))
                 {
-                    bg = ColorScheme.GetColor(s.ActiveBackgroundColor);
-                    bo = ColorScheme.GetColor(s.ActiveBorderColor);
-                    fg = ColorScheme.GetColor(s.ActiveTextColor);
+                    bg = ColorScheme.GetColor(s.ActiveBackground);
+                    bo = ColorScheme.GetColor(s.ActiveBorder);
+                    fg = ColorScheme.GetColor(s.ActiveForeground);
                 }
                 else if (IsEnabled && IsFocused)
                 {
-                    bg = ColorScheme.GetColor(s.FocusBackgroundColor);
-                    bo = ColorScheme.GetColor(s.FocusBorderColor);
-                    fg = ColorScheme.GetColor(s.TextColor);
+                    bg = ColorScheme.GetColor(s.FocusBackground);
+                    bo = ColorScheme.GetColor(s.FocusBorder);
+                    fg = ColorScheme.GetColor(s.Foreground);
                 }
                 else
                 {
-                    bg = ColorScheme.GetColor(s.BackgroundColor);
-                    bo = ColorScheme.GetColor(s.BorderColor);
-                    fg = ColorScheme.GetColor(s.TextColor);
+                    bg = ColorScheme.GetColor(s.Background);
+                    bo = ColorScheme.GetColor(s.Border);
+                    fg = ColorScheme.GetColor(s.Foreground);
                 }
 
                 if (!IsEnabled)

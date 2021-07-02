@@ -120,25 +120,25 @@
 
                     switch (s) {
                         case '':
-                            cs += '    TextColor = ' + getRgba(style.color) + ",\n";
-                            cs += '    BackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
-                            cs += '    BorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                            cs += '    Foreground = ' + getRgba(style.color) + ",\n";
+                            cs += '    Background = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    Border = ' + getRgba(style.borderTopColor) + ",\n";
                             break;
                         case 'active':
-                            cs += '    ActiveTextColor = ' + getRgba(style.color) + ",\n";
-                            cs += '    ActiveBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
-                            cs += '    ActiveBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                            cs += '    ActiveForeground = ' + getRgba(style.color) + ",\n";
+                            cs += '    ActiveBackground = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    ActiveBorder = ' + getRgba(style.borderTopColor) + ",\n";
                             break;
                         /*
                     case 'hover':
-                        cs += '    HoverBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
-                        cs += '    HoverBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
+                        cs += '    HoverBackground = ' + getRgba(style.backgroundColor) + ",\n";
+                        cs += '    HoverBorder = ' + getRgba(style.borderTopColor) + ",\n";
                         break;
                         */
                         case 'focus':
-                            cs += '    FocusBackgroundColor = ' + getRgba(style.backgroundColor) + ",\n";
-                            cs += '    FocusBorderColor = ' + getRgba(style.borderTopColor) + ",\n";
-                            cs += '    FocusShadowColor = ' + getRgba(style.boxShadow) + ",\n";
+                            cs += '    FocusBackground = ' + getRgba(style.backgroundColor) + ",\n";
+                            cs += '    FocusBorder = ' + getRgba(style.borderTopColor) + ",\n";
+                            cs += '    FocusShadow = ' + getRgba(style.boxShadow) + ",\n";
                             break;
                     }
                 }

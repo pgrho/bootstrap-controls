@@ -30,42 +30,42 @@ namespace Shipwreck.BootstrapControls
         #region TextBrush
 
         private SolidColorBrush _TextBrush;
-        public SolidColorBrush TextBrush => _TextBrush ??= GetBrush(TextColor);
+        public SolidColorBrush TextBrush => _TextBrush ??= GetBrush(Foreground);
 
         #endregion TextBrush
 
         #region BackgroundBrush
 
         private SolidColorBrush _BackgroundBrush;
-        public SolidColorBrush BackgroundBrush => _BackgroundBrush ??= GetBrush(BackgroundColor);
+        public SolidColorBrush BackgroundBrush => _BackgroundBrush ??= GetBrush(Background);
 
         #endregion BackgroundBrush
 
         #region BorderBrush
 
         private SolidColorBrush _BorderBrush;
-        public SolidColorBrush BorderBrush => _BorderBrush ??= GetBrush(BorderColor);
+        public SolidColorBrush BorderBrush => _BorderBrush ??= GetBrush(Border);
 
         #endregion BorderBrush
 
         #region ActiveTextBrush
 
         private SolidColorBrush _ActiveTextBrush;
-        public SolidColorBrush ActiveTextBrush => _ActiveTextBrush ??= GetBrush(ActiveTextColor);
+        public SolidColorBrush ActiveTextBrush => _ActiveTextBrush ??= GetBrush(ActiveForeground);
 
         #endregion ActiveTextBrush
 
         #region ActiveBackgroundBrush
 
         private SolidColorBrush _ActiveBackgroundBrush;
-        public SolidColorBrush ActiveBackgroundBrush => _ActiveBackgroundBrush ??= GetBrush(ActiveBackgroundColor);
+        public SolidColorBrush ActiveBackgroundBrush => _ActiveBackgroundBrush ??= GetBrush(ActiveBackground);
 
         #endregion ActiveBackgroundBrush
 
         #region ActiveBorderBrush
 
         private SolidColorBrush _ActiveBorderBrush;
-        public SolidColorBrush ActiveBorderBrush => _ActiveBorderBrush ??= GetBrush(ActiveBorderColor);
+        public SolidColorBrush ActiveBorderBrush => _ActiveBorderBrush ??= GetBrush(ActiveBorder);
 
         #endregion ActiveBorderBrush
 
@@ -86,21 +86,21 @@ namespace Shipwreck.BootstrapControls
         #region FocusBackgroundBrush
 
         private SolidColorBrush _FocusBackgroundBrush;
-        public SolidColorBrush FocusBackgroundBrush => _FocusBackgroundBrush ??= GetBrush(FocusBackgroundColor);
+        public SolidColorBrush FocusBackgroundBrush => _FocusBackgroundBrush ??= GetBrush(FocusBackground);
 
         #endregion FocusBackgroundBrush
 
         #region FocusBorderBrush
 
         private SolidColorBrush _FocusBorderBrush;
-        public SolidColorBrush FocusBorderBrush => _FocusBorderBrush ??= GetBrush(FocusBorderColor);
+        public SolidColorBrush FocusBorderBrush => _FocusBorderBrush ??= GetBrush(FocusBorder);
 
         #endregion FocusBorderBrush
 
         #region FocusShadowBrush
 
         private SolidColorBrush _FocusShadowBrush;
-        public SolidColorBrush FocusShadowBrush => _FocusShadowBrush ??= GetBrush(FocusShadowColor);
+        public SolidColorBrush FocusShadowBrush => _FocusShadowBrush ??= GetBrush(FocusShadow);
 
         #endregion FocusShadowBrush
 
