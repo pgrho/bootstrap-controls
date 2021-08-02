@@ -13,37 +13,50 @@
         x:Key="BootstrapControls.Button.Core"
         TargetType="Button"
         BasedOn="{StaticResource MahApps.Styles.Button.Flat}">
+
         <Setter
             Property="BorderThickness"
             Value="1" />
         <Setter
             Property="SnapsToDevicePixels"
             Value="True" />
-        <Setter
-            Property="Background"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BackgroundBrush}" />
-        <Setter
-            Property="BorderBrush"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BorderBrush}" />
-        <Setter
-            Property="Foreground"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).TextBrush}" />
-        <Setter
-            Property="FocusVisualStyle"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).FocusVisualStyle}" />
+
         <Setter
             Property="bs4:ColorScheme.Scheme"
             Value="{x:Static bs4:ColorScheme.OutlineSecondary}" />
+        <Style.Resources>
+            <bs4:IsColorSchemeSetConverter
+                x:Key="IsColorSchemeSetConverter" />
+        </Style.Resources>
         <Style.Triggers>
-            <MultiTrigger>
-                <MultiTrigger.Conditions>
+            <DataTrigger
+                Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                Value="True">
+                <Setter
+                    Property="Background"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BackgroundBrush}" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BorderBrush}" />
+                <Setter
+                    Property="Foreground"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).TextBrush}" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).FocusVisualStyle}" />
+            </DataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
                     <Condition
-                        Property="IsEnabled"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled}"
                         Value="True" />
                     <Condition
-                        Property="IsMouseOver"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}"
                         Value="True" />
-                </MultiTrigger.Conditions>
+                    <Condition
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                        Value="True" />
+                </MultiDataTrigger.Conditions>
                 <Setter
                     Property="Background"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).ActiveBackgroundBrush}" />
@@ -53,16 +66,19 @@
                 <Setter
                     Property="Foreground"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).ActiveTextBrush}" />
-            </MultiTrigger>
-            <MultiTrigger>
-                <MultiTrigger.Conditions>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
                     <Condition
-                        Property="IsEnabled"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled}"
                         Value="True" />
                     <Condition
-                        Property="IsPressed"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsPressed}"
                         Value="True" />
-                </MultiTrigger.Conditions>
+                    <Condition
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                        Value="True" />
+                </MultiDataTrigger.Conditions>
                 <Setter
                     Property="Background"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).ActiveBackgroundBrush}" />
@@ -72,22 +88,25 @@
                 <Setter
                     Property="Foreground"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).ActiveTextBrush}" />
-            </MultiTrigger>
-            <MultiTrigger>
-                <MultiTrigger.Conditions>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
                     <Condition
-                        Property="IsEnabled"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled}"
                         Value="True" />
                     <Condition
-                        Property="IsPressed"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsPressed}"
                         Value="False" />
                     <Condition
-                        Property="IsMouseOver"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}"
                         Value="False" />
                     <Condition
-                        Property="IsKeyboardFocused"
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsKeyboardFocused}"
                         Value="True" />
-                </MultiTrigger.Conditions>
+                    <Condition
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                        Value="True" />
+                </MultiDataTrigger.Conditions>
                 <Setter
                     Property="Foreground"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).TextBrush}" />
@@ -97,10 +116,16 @@
                 <Setter
                     Property="Background"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).FocusBackgroundBrush}" />
-            </MultiTrigger>
-            <Trigger
-                Property="IsEnabled"
-                Value="False">
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsEnabled}"
+                        Value="False" />
+                    <Condition
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                        Value="True" />
+                </MultiDataTrigger.Conditions>
                 <Setter
                     Property="Background"
                     Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BackgroundBrush}" />
@@ -113,7 +138,7 @@
                 <Setter
                     Property="Opacity"
                     Value="0.65" />
-            </Trigger>
+            </MultiDataTrigger>
         </Style.Triggers>
     </Style>
 

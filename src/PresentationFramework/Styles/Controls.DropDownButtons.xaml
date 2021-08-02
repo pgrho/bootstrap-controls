@@ -14,27 +14,13 @@
     <Style
         x:Key="BootstrapControls.DropDownButton.Core"
         TargetType="mah:DropDownButton">
+
         <Setter
             Property="BorderThickness"
             Value="1" />
         <Setter
             Property="SnapsToDevicePixels"
             Value="True" />
-        <Setter
-            Property="Background"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BackgroundBrush}" />
-        <Setter
-            Property="BorderBrush"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BorderBrush}" />
-        <Setter
-            Property="Foreground"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).TextBrush}" />
-        <Setter
-            Property="FocusVisualStyle"
-            Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).FocusVisualStyle}" />
-        <Setter
-            Property="bs4:ColorScheme.Scheme"
-            Value="{x:Static bs4:ColorScheme.OutlineSecondary}" />
         <Setter
             Property="Template">
             <Setter.Value>
@@ -164,6 +150,31 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Resources>
+            <bs4:IsColorSchemeSetConverter
+                x:Key="IsColorSchemeSetConverter" />
+        </Style.Resources>
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme), Converter={StaticResource IsColorSchemeSetConverter}}"
+                Value="True">
+                <Setter
+                    Property="Background"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BackgroundBrush}" />
+                <Setter
+                    Property="BorderBrush"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).BorderBrush}" />
+                <Setter
+                    Property="Foreground"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).TextBrush}" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(bs4:ColorScheme.Scheme).FocusVisualStyle}" />
+                <Setter
+                    Property="bs4:ColorScheme.Scheme"
+                    Value="{x:Static bs4:ColorScheme.OutlineSecondary}" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
     <Style
         x:Key="BootstrapControls.DropDownButton.Small"

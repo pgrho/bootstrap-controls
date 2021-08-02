@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)BootstrapControls\ColorScheme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BootstrapControls\ColorSchemeConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BootstrapControls\ContainerWidthConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BootstrapControls\IsColorSchemeSetConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XMLNS.cs" />
   </ItemGroup>
 </Project>
