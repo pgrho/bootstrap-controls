@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipwreck.BootstrapControls
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipwreck.BootstrapControls.Demo.iOS", "Demo.iOS\Shipwreck.BootstrapControls.Demo.iOS.csproj", "{9F13197F-F2D6-4FE5-ABFB-C1BE2DCBEC1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipwreck.BootstrapControls.Blazor", "Shipwreck.BootstrapControls.Blazor\Shipwreck.BootstrapControls.Blazor.csproj", "{D123C1DF-9C55-4BAF-8059-5B5C985469EE}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Shipwreck.BootstrapControls.Shared.projitems*{35bb9748-7738-45f7-b7c7-751346c985d8}*SharedItemsImports = 13
@@ -171,6 +173,26 @@ Global
 		{9F13197F-F2D6-4FE5-ABFB-C1BE2DCBEC1F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{9F13197F-F2D6-4FE5-ABFB-C1BE2DCBEC1F}.Release|x64.ActiveCfg = Release|iPhoneSimulator
 		{9F13197F-F2D6-4FE5-ABFB-C1BE2DCBEC1F}.Release|x86.ActiveCfg = Release|iPhoneSimulator
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|iPhone.Build.0 = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|x64.Build.0 = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{D123C1DF-9C55-4BAF-8059-5B5C985469EE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
