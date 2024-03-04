@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Android.Content;
+﻿using Android.Content;
 using Android.Views;
-using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Handlers.Compatibility;
-using Microsoft.Maui.Controls.Platform;
-using Microsoft.Maui.Handlers;
 
 namespace Shipwreck.BootstrapControls.Platforms.Android;
 
@@ -17,6 +9,12 @@ public class ButtonFrameRenderer : FrameRenderer
     public ButtonFrameRenderer(Context context)
         : base(context)
     {
+        Touch += ButtonFrameRenderer_Touch;
+    }
+
+    private void ButtonFrameRenderer_Touch(object sender, TouchEventArgs e)
+    {
+        e.Handled = OnTouchEvent(e.Event);
     }
 
     public override bool OnTouchEvent(MotionEvent e)
