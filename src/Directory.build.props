@@ -2,8 +2,8 @@
   <PropertyGroup>
     <Version>4.2.1-alpha002</Version>
     <Authors>shipwreck.jp</Authors>
-    <Copyright>Copyright © 2021 shipwreck.jp</Copyright>
-    <LangVersion>9.0</LangVersion>
+    <Copyright>Copyright © 2021-2024 shipwreck.jp</Copyright>
+    <LangVersion>12.0</LangVersion>
     <IsDeterministic>true</IsDeterministic>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/pgrho/bootstrap-controls</PackageProjectUrl>

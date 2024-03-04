@@ -6,6 +6,10 @@ using Xamarin.Forms;
 using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Media;
+#elif IS_MAUI
+using System.ComponentModel;
+using Microsoft.Maui;
+using Microsoft.Maui.Graphics;
 #else
 using Xamarin.Forms;
 #endif
