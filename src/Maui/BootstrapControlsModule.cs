@@ -1,5 +1,7 @@
 ﻿using Microsoft.Maui.Hosting;
+#if ANDROID
 using Shipwreck.BootstrapControls.Platforms.Android;
+#endif
 
 namespace Shipwreck.BootstrapControls;
 
